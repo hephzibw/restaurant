@@ -1,0 +1,20 @@
+<h1>All Restaurant Listings</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Speciality</th>
+    <th>Phone number</th>
+  </tr>
+  <% @cafes.each do |cafe| %>
+  <tr>
+    <td><%= cafe.name %></td>
+    <td><%= cafe.address %></td>
+    <td><%= cafe.speciality %></td>
+    <td><%= cafe.phone_number %></td>
+    <td><%= link_to "Show", cafe_path(cafe) %></td>
+    <td><%= link_to "Edit", edit_cafe_path(cafe) %></td>
+    <td><%= link_to "Delete", cafe_path(cafe), method: :delete %></td>
+  </tr>
+  <% end %>
+</table>

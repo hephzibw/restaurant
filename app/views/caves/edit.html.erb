@@ -1,0 +1,32 @@
+<h1>Edit Cafe</h1>
+
+<%= form_for @cafe do |f| %>
+    <% if @cafe.errors.present? %>
+        <div id="errorExplanation">
+          <p><%= @cafe.errors.count %> errors prevented this cafe from being saved</p>
+          <ul>
+            <% @cafe.errors.full_messages.each do |m| %>
+                <li><%= m %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <p>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.label :address %>
+      <%= f.text_area :address %>
+    </p>
+    <p>
+      <%= f.label :speciality %>
+      <%= f.text_field :speciality %>
+    </p>
+    <p>
+      <%= f.label :phone_number %>
+      <%= f.text_field :phone_number %>
+    </p>
+    <%= f.submit "Update" %>
+
+<% end %>

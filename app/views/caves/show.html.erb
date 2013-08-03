@@ -1,0 +1,19 @@
+<h1>Restaurant Listing</h1>
+<p>
+  <strong>Name:</strong>
+  <%= @cafe.name %>
+</p>
+<p>
+  <strong>Address:</strong>
+  <%= @cafe.address %>
+</p>
+<p>
+  <strong>Speciality:</strong>
+  <%= @cafe.speciality %>
+</p>
+<p>
+  <strong>Phone Number:</strong>
+  <%= @cafe.phone_number %>
+</p>
+<td><%= link_to "Back", caves_path %></td>
+<td><%= link_to "Edit", edit_cafe_path(@cafe) %></td>
