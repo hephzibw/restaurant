@@ -13,7 +13,9 @@ Restaurant::Application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-     resources :caves
+     resources :caves do
+       resources :reviews
+     end
 
   # Example resource route with options:
   #   resources :products do
@@ -35,7 +37,7 @@ Restaurant::Application.routes.draw do
 
   # Example resource route with more complex sub-resources:
   #   resources :products do
-  #     resources :comments
+  #resources :comments
   #     resources :sales do
   #       get 'recent', on: :collection
   #     end

@@ -15,5 +15,13 @@
   <strong>Phone Number:</strong>
   <%= @cafe.phone_number %>
 </p>
+
+<h2>Reviews:</h2>
+<% @cafe.reviews.each do |r| %>
+    <strong><%= r.body %></strong>
+    <p>posted by <%= r.reviewer %></p>
+<% end %>
+
 <td><%= link_to "Back", caves_path %></td>
 <td><%= link_to "Edit", edit_cafe_path(@cafe) %></td>
+

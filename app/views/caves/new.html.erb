@@ -1,6 +1,7 @@
 <h1>New Cafe</h1>
 
 <%= form_for @cafe do |f| %>
+    <% if @cafe.errors.present? %>
     <div id="errorExplanation">
       <p><%= @cafe.errors.count %> errors prevented this cafe from being saved</p>
       <ul>
@@ -9,6 +10,7 @@
         <% end %>
       </ul>
     </div>
+        <% end %>
     <p>
       <%= f.label :name %>
       <%= f.text_field :name %>

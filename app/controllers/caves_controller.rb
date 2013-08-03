@@ -40,4 +40,7 @@ class CavesController < ApplicationController
 
     redirect_to caves_path
   end
+  def review
+
+  end
 end
